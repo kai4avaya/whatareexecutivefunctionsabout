@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embodied and Emergent Learning Initiative</title>
+  <style>
+    /* Global academic/textbook style */
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      color: #333;
+      font-family: Georgia, serif;
+      line-height: 1.8;
+    }
+    header, footer {
+      text-align: center;
+      padding: 20px;
+    }
+    header {
+      background: #eaeaea;
+      border-bottom: 2px solid #ccc;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+      margin-top: 0;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #1abc9c;
+    }
+    sup a {
+      text-decoration: none;
+      font-size: 0.9em;
+    }
+
+    /* Page grid layout */
+    .page-grid {
+      display: grid;
+      grid-template-columns: 1fr; /* one column on mobile */
+      gap: 20px;
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    @media (min-width: 992px) {
+      .page-grid {
+        grid-template-columns: 1fr 320px; /* main content and sidebar */
+      }
+    }
+
+    /* Main Content Styles */
+    .main-content section {
+      margin-bottom: 40px;
+    }
+    
+    /* Sidebar (Margin References) */
+    .sidebar {
+      /* On desktop the sidebar appears in its grid column.
+         On mobile the sidebar will be below main content. */
+    }
+    .reference {
+      border: 1px solid #ccc;
+      background: #fff;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 0.9em;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+      transition: background 0.3s, transform 0.3s;
+    }
+    .reference:hover {
+      background: #f0f8ff;
+      transform: scale(1.02);
+    }
+
+    /* Mermaid diagram container style */
+    .mermaid {
+      background: #fafafa;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 20px 0;
+    }
+    .diagram-footer {
+      font-size: 0.8em;
+      color: #555;
+      text-align: center;
+      margin-top: 5px;
+    }
+    
+    /* Reference Footnotes Section (in main content) */
+    #reference-footnotes {
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 2px solid #ccc;
+      background: #f9f9f9;
+    }
+    .ref-footnote {
+      margin: 10px 0;
+      padding: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .ref-footnote:hover {
+      background: #e0f7fa;
+      transform: translateX(5px);
+    }
+    
+    /* View transition animation */
+    .view-transition {
+      transition: opacity 0.5s ease-in-out;
+    }
+    .hidden {
+      opacity: 0;
+    }
+  </style>
+  <!-- Include the Mermaid library from CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>
+    // Initialize Mermaid diagrams on load
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</head>
+<body class="view-transition">
+  <header>
+    <h1>Embodied and Emergent Learning Initiative</h1>
+    <p>Where Mind and Body Converge to Fuel Sustainable, Engaged Learning</p>
+  </header>
+  
+  <!-- Page Grid Container: Main Content & Sidebar -->
+  <div class="page-grid">
+    <!-- Main Content Column -->
+    <div class="main-content">
+      <section id="about">
+        <h2>About Our Initiative</h2>
+        <p>
+          We are practicing artists, educators, and researchers dedicated to the development of embodied and emergent learning. Since 2008, as a way to further creativity as teachers and artists, Kai Kleinbard founded a research initiative to understand how efficient learning and creativity are enhanced by developing a deep awareness of the unity of mind and body<sup><a href="#ref1">1</a></sup> and allowing the flow of curiosity and imagination to guide an emergent practice.
+        </p>
+        <p>
+          Our approach now integrates artificial intelligence as a research assistant—curating data, suggesting creative directions, and refining methodologies based on past iterations. Furthermore, our work is informed by academic research on mindfulness, executive functions, and reflective training<sup><a href="#ref2">2</a></sup><sup><a href="#ref4">4</a></sup>, ensuring that our pedagogical strategies are grounded in rigorous evidence.
+        </p>
+        <p>
+          Discover our projects <a href="#projects">here</a>, explore our <a href="#methodologies">methodologies</a>, and learn more about our educational services <a href="#services">here</a>.
+        </p>
+      </section>
+      
+      <section id="research">
+        <h2>Embodied and Emergent Learning in Action</h2>
+        <p>
+          Our methodology fuses embodied practices with an emergent, iterative research process. The diagram below outlines how creative curiosity lies at the core of our learning system<sup><a href="#ref3">3</a></sup>.
+        </p>
+        <div class="mermaid">
+          graph LR
+          A[Curiosity] --> B[Creative Iteration]
+          B --> C{Mind-Body Unity}
+          C --> D[Enhanced Learning]
+          D --> E[Emergent Research]
+        </div>
+        <div class="diagram-footer">Diagram 1: Flowchart depicting the integration of embodied practices with emergent learning.</div>
+        
+        <p>
+          Additionally, we have integrated AI as an essential part of our process, assisting with research, data curation, and creative analysis<sup><a href="#ref5">5</a></sup>.
+        </p>
+        <div class="mermaid">
+          graph TD
+          F[AI Research Assistant] --> G[Data Curation]
+          G --> H[Creative Analysis]
+          H --> I[Interactive Learning]
+        </div>
+        <div class="diagram-footer">Diagram 2: Representation of AI integration as a research assistant within our learning ecosystem.</div>
+      </section>
+      
+      <section id="services">
+        <h2>Our Services</h2>
+        <p>
+          In addition to our ongoing research, we provide specialized services supporting executive functions and mindfulness coaching. Our offerings, detailed at 
+          <a href="https://thebodyliterate.com" target="_blank">thebodyliterate.com</a>, draw upon rigorous academic research and practical expertise to foster sustainable, engaged learning.
+        </p>
+      </section>
+      
+      <section id="projects">
+        <h2>Current Projects</h2>
+        <p>
+          Explore a selection of our current projects that push the boundaries of creative inquiry and active learning. [Link to detailed projects page]
+        </p>
+      </section>
+      
+      <section id="methodologies">
+        <h2>Our Methodologies</h2>
+        <p>
+          Learn about our unique approaches that combine rigorous research, embodied cognition, and emergent learning principles. [Link to methodologies page]
+        </p>
+      </section>
+      
+      <!-- Reference Footnotes within Main Content -->
+      <section id="reference-footnotes">
+        <h2>Reference Footnotes</h2>
+        <div class="ref-footnote" data-ref="ref1">
+          1. PD Zelazo et al. (2018): Explores how mindfulness combined with reflection training enhances executive functions in early childhood.
+        </div>
+        <div class="ref-footnote" data-ref="ref2">
+          2. JP Alfonso et al. (2011): Demonstrates that integrating goal management training with mindfulness meditation improves decision-making and executive functions.
+        </div>
+        <div class="ref-footnote" data-ref="ref3">
+          3. JT Nien et al. (2020): Examines the benefits of mindfulness training for athletic performance and cognitive functioning.
+        </div>
+        <div class="ref-footnote" data-ref="ref4">
+          4. C Blair (2017): Reviews educational strategies that use mindfulness to enhance executive function skills.
+        </div>
+        <div class="ref-footnote" data-ref="ref5">
+          5. Additional Study (2012): Investigates the complementary benefits of mindfulness practices on executive function development.
+        </div>
+      </section>
+    </div> <!-- End .main-content -->
+    
+    <!-- Sidebar Column for Margin References -->
+    <div class="sidebar">
+      <div class="reference" id="ref1">
+        PD Zelazo et al. (2018)<br>
+        <a href="https://www.frontiersin.org/articles/10.3389/fpsyg.2018.00208/full" target="_blank">Mindfulness plus Reflection Training</a><br>
+        <small>This paper explores how combining reflection training and mindfulness enhances executive functions in early childhood.</small>
+      </div>
+      <div class="reference" id="ref2">
+        JP Alfonso et al. (2011)<br>
+        <a href="https://www.sciencedirect.com/science/article/pii/S0376871611000494" target="_blank">Combined Goal Management Training &amp; Mindfulness Meditation</a><br>
+        <small>Investigates how integrating goal management training with mindfulness meditation improves decision-making and executive functions.</small>
+      </div>
+      <div class="reference" id="ref3">
+        JT Nien et al. (2020)<br>
+        <a href="https://onlinelibrary.wiley.com/doi/abs/10.1155/2020/8213710" target="_blank">Mindfulness Training in Athletes</a><br>
+        <small>This study examines how mindfulness training benefits athletic endurance and executive function.</small>
+      </div>
+      <div class="reference" id="ref4">
+        C Blair (2017)<br>
+        <a href="https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wcs.1403" target="_blank">Educating Executive Function</a><br>
+        <small>A review of educational strategies incorporating mindfulness to enhance executive functions.</small>
+      </div>
+      <div class="reference" id="ref5">
+        Additional Study (2012)<br>
+        <a href="https://srcd.onlinelibrary.wiley.com/doi/abs/10.1111/j.1750-8606.2012.00250.x" target="_blank">Study on Executive Function and Mindfulness</a><br>
+        <small>Explores the synergistic effects of mindfulness practices on the development of executive functions.</small>
+      </div>
+    </div> <!-- End .sidebar -->
+  </div> <!-- End .page-grid -->
+  
+  <footer>
+    <p>&copy; 2025 Embodied and Emergent Learning Initiative. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    // Smooth view transition for in-page hash links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        // Only intercept internal links
+        e.preventDefault();
+        const hash = this.getAttribute('href');
+        document.body.classList.add('hidden');
+        setTimeout(() => {
+          window.location.hash = hash;
+          document.body.classList.remove('hidden');
+        }, 500);
+      });
+    });
+    
+    // Function to set highlight on a given margin reference box
+    function highlightRef(refId, state) {
+      const refBox = document.getElementById(refId);
+      if (refBox) {
+        refBox.style.backgroundColor = state ? "#f0f8ff" : "";
+        refBox.style.transform = state ? "scale(1.02)" : "";
+      }
+    }
+    
+    // Hover effect for inline superscripts in main content
+    document.querySelectorAll('sup a').forEach(supLink => {
+      supLink.addEventListener('mouseover', function() {
+        const refId = this.getAttribute('href').substring(1);
+        highlightRef(refId, true);
+      });
+      supLink.addEventListener('mouseout', function() {
+        const refId = this.getAttribute('href').substring(1);
+        highlightRef(refId, false);
+      });
+    });
+    
+    // Hover effect for reference footnotes
+    document.querySelectorAll('.ref-footnote').forEach(footnote => {
+      footnote.addEventListener('mouseover', function() {
+        const refId = this.getAttribute('data-ref');
+        highlightRef(refId, true);
+      });
+      footnote.addEventListener('mouseout', function() {
+        const refId = this.getAttribute('data-ref');
+        highlightRef(refId, false);
+      });
+    });
+  </script>
+</body>
+</html>
