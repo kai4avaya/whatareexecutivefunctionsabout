@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Embodied and Emergent Learning Initiative</title>
+  <title>bodyLITERATE Research Initiative</title>
   <style>
     /* Global academic/textbook style */
     body {
@@ -11,7 +11,7 @@
       padding: 0;
       background: #fdfdfd;
       color: #333;
-      font-family: Georgia, serif;
+      font-family: 'Fira Mono', 'Consolas', 'Menlo', 'Monaco', monospace;
       line-height: 1.8;
     }
     header, footer {
@@ -117,6 +117,89 @@
     .hidden {
       opacity: 0;
     }
+    p {
+      font-weight: 400;
+    }
+    
+    /* Contact Us Component */
+    .contact-call {
+      margin: 40px auto 0 auto;
+      padding: 0;
+      text-align: center;
+      background: #f7f7f7;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(44, 62, 80, 0.08);
+      max-width: 420px;
+      outline: none;
+      overflow: hidden;
+      transition: box-shadow 0.3s;
+    }
+    .contact-call:focus {
+      outline: 2px solid #1abc9c;
+    }
+    .contact-top, .contact-bottom {
+      transition: transform 0.7s cubic-bezier(.42,2,.58,.9);
+      background: transparent;
+      position: relative;
+    }
+    .contact-top {
+      padding: 24px 0 0 0;
+      z-index: 2;
+    }
+    .contact-bottom {
+      padding: 0 0 18px 0;
+      z-index: 1;
+    }
+    .contact-heading {
+      margin: 0 0 8px 0;
+      color: #2c3e50;
+      font-size: 1.35em;
+      letter-spacing: 1px;
+      position: relative;
+      overflow: visible;
+    }
+    .falling-text {
+      display: inline-block;
+      transition: transform 0.8s cubic-bezier(.42,2,.58,.9), opacity 0.7s;
+    }
+    .contact-message {
+      margin: 0 0 12px 0;
+      color: #555;
+      font-size: 1em;
+    }
+    .contact-links {
+      margin: 0;
+    }
+    .contact-link {
+      color: #2980b9;
+      font-size: 1.1em;
+      text-decoration: underline;
+      word-break: break-all;
+      display: inline-block;
+      margin: 6px 0;
+      padding: 6px 12px;
+      border-radius: 5px;
+      transition: background 0.2s, color 0.2s;
+      background: transparent;
+    }
+    .contact-link:hover, .contact-link:focus {
+      background: #e0f7fa;
+      color: #1abc9c;
+    }
+    /* Weird break animation */
+    .contact-call:hover .contact-top,
+    .contact-call:focus .contact-top {
+      transform: translateY(-60px) rotate(-6deg);
+    }
+    .contact-call:hover .contact-bottom,
+    .contact-call:focus .contact-bottom {
+      transform: translateY(40px) rotate(4deg);
+    }
+    .contact-call:hover .falling-text,
+    .contact-call:focus .falling-text {
+      transform: translateY(120px) rotate(40deg) scale(1.2);
+      opacity: 0;
+    }
   </style>
   <!-- Include the Mermaid library from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
@@ -127,8 +210,8 @@
 </head>
 <body class="view-transition">
   <header>
-    <h1>Embodied and Emergent Learning Initiative</h1>
-    <p>Where Mind and Body Converge to Fuel Sustainable, Engaged Learning</p>
+    <h1>bodyLITERATE Research Initiative</h1>
+    <p>Where Mind and Body Converge to Support Sustainable, Engaged Learning</p>
   </header>
   
   <!-- Page Grid Container: Main Content & Sidebar -->
@@ -136,15 +219,34 @@
     <!-- Main Content Column -->
     <div class="main-content">
       <section id="about">
-        <h2>About Our Initiative</h2>
+        <h2>bodyLITERATE Research &amp; Lesson Planning Tool</h2>
+        <p><strong>Overview</strong></p>
         <p>
-          We are practicing artists, educators, and researchers dedicated to the development of embodied and emergent learning. Since 2008, as a way to further creativity as teachers and artists, Kai Kleinbard founded a research initiative to understand how efficient learning and creativity are enhanced by developing a deep awareness of the unity of mind and body<sup><a href="#ref1">1</a></sup> and allowing the flow of curiosity and imagination to guide an emergent practice.
+          This tool is designed to empower educators, therapists, and researchers working with executive function skills, mindfulness, and somatics. Developed by bodyLITERATE, it serves as a comprehensive platform to track research, organize lesson plans, and support those teaching people of all ages—including individuals with ADHD, processing issues, and neurodiverse profiles.
         </p>
+        <p><strong>Key Features</strong></p>
+        <ul>
+          <li><strong>AI-Powered Research Extraction:</strong> Utilizes Google Gemini, a state-of-the-art large language model, to extract and summarize academic papers and research relevant to executive functions, mindfulness, and somatic practices.</li>
+          <li><strong>Academic Paper Aggregation:</strong> Automatically pulls research papers from the ERIC (Education Resources Information Center) database, ensuring access to the latest peer-reviewed studies in education and psychology.</li>
+          <li><strong>bodyLITERATE Research Archive:</strong> Integrates years of curated research and resources compiled by the bodyLITERATE Research Initiative (since 2008), providing a unique, expert-driven knowledge base.</li>
+          <li><strong>Lesson Plan Organization:</strong> Allows educators to organize, annotate, and link research findings directly to lesson plans, supporting evidence-based teaching and individualized instruction.</li>
+          <li><strong>Support for Diverse Learners:</strong> Designed with a focus on executive function skill-building for all ages, including tools and resources tailored for ADHD, learning differences, and neurodiversity.</li>
+        </ul>
+        <p><strong>How It Works</strong></p>
+        <ol>
+          <li><strong>Query &amp; Extraction:</strong> Users can ask questions or search for topics related to executive function, mindfulness, or somatics. The app uses Gemini to interpret queries and extract relevant academic content.</li>
+          <li><strong>Database Integration:</strong> The system searches both the ERIC database and the bodyLITERATE research archive, returning summaries and links to full papers where available.</li>
+          <li><strong>Lesson Planning Tools:</strong> Research findings can be organized into lesson plans, annotated, and shared with colleagues, supporting collaborative and adaptive teaching.</li>
+        </ol>
+        <p><strong>Under the Hood</strong></p>
+        <ul>
+          <li><strong>AI Model:</strong> Google Gemini (for natural language understanding and summarization)</li>
+          <li><strong>Academic Sources:</strong> ERIC database, bodyLITERATE Research Initiative archive (2008–present)</li>
+          <li><strong>Target Users:</strong> Teachers, therapists, researchers, and anyone supporting executive function development</li>
+        </ul>
+        <p><strong>About bodyLITERATE</strong></p>
         <p>
-          Our approach now integrates artificial intelligence as a research assistant—curating data, suggesting creative directions, and refining methodologies based on past iterations. Furthermore, our work is informed by academic research on mindfulness, executive functions, and reflective training<sup><a href="#ref2">2</a></sup><sup><a href="#ref4">4</a></sup>, ensuring that our pedagogical strategies are grounded in rigorous evidence.
-        </p>
-        <p>
-          Discover our projects <a href="#projects">here</a>, explore our <a href="#methodologies">methodologies</a>, and learn more about our educational services <a href="#services">here</a>.
+          bodyLITERATE is committed to advancing embodied learning and executive function education. This tool is part of our ongoing mission to bridge research and practice, making the latest science accessible and actionable for educators and learners everywhere.
         </p>
       </section>
       
@@ -247,8 +349,24 @@
     </div> <!-- End .sidebar -->
   </div> <!-- End .page-grid -->
   
+  <!-- Contact Us Component -->
+  <div class="contact-call" tabindex="0">
+    <div class="contact-top">
+      <h3 class="contact-heading"><span class="falling-text">Contact Us</span></h3>
+      <p class="contact-message">Have questions or want to collaborate? Reach out to us anytime!</p>
+    </div>
+    <div class="contact-bottom contact-links">
+      <a href="mailto:hi@thebodyliterate.com" class="contact-link" aria-label="Email hi@thebodyliterate.com">
+        hi@thebodyliterate.com
+      </a><br>
+      <a href="tel:9176939960" class="contact-link" aria-label="Call 917-693-9960">
+        917-693-9960
+      </a>
+    </div>
+  </div>
+  
   <footer>
-    <p>&copy; 2025 Embodied and Emergent Learning Initiative. All rights reserved.</p>
+    <p>&copy; 2025 bodyLITERATE Research Initiative. All rights reserved.</p>
   </footer>
   
   <script>
